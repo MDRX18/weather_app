@@ -71,7 +71,7 @@ function locationerror(error) {
   switch (error.code) {
     case error.PERMISSION_DENIED:
       alert('Permision denaid.\n Please allow to take your location!!!')
-      getlocation()
+      get_location()
       break
     case error.POSITION_UNAVAILABLE:
       alert('position unavailable')
