@@ -70,8 +70,8 @@ function savelocation(position) {
 function locationerror(error) {
   switch (error.code) {
     case error.PERMISSION_DENIED:
-      alert('Permision denaid.\n Please allow to take your location!!!')
-      get_location()
+      alert('Permision denaid.\n Please turn on the location!!!')
+      opensearch()
       break
     case error.POSITION_UNAVAILABLE:
       alert('position unavailable')
