@@ -28,7 +28,10 @@
               onsearch="searchf(this)"
             />
           </div>
-          <div class="location" onclick="get_location()">
+          <div
+            class="location"
+            onclick="get_location('Use current location\nTo get local weather, your current location will be send to the weather services provider.\nIn order to provide you with continuing weather information, Weather will have access to your location next time.')"
+          >
             Add current location
           </div>
           <div id="search-result"></div>
@@ -53,10 +56,8 @@
       <div class="openloc" onclick="openloc()"><i class="fas fa-bars"></i></div>
       <h1 style="text-align: center; padding: 20px 0; color: white">Weather</h1>
       <div class="row justify-center">
-        <div class="todayweather">
-        </div>
-        <div class="weeksweather">
-        </div>
+        <div class="todayweather"></div>
+        <div class="weeksweather"></div>
         <div class="aboutweather">
           <div class="aw row">
             <div class="aw-img"><img src="./img/uv.png" alt="error" /></div>

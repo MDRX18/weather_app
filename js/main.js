@@ -70,7 +70,9 @@ function savelocation(position) {
 function locationerror(error) {
   switch (error.code) {
     case error.PERMISSION_DENIED:
-      alert('Permision denaid.\n Please turn on the location!!!')
+      alert(
+        'Permision denaid or turn off location.\nPlease turn on the location and try again!!!'
+      )
       opensearch()
       break
     case error.POSITION_UNAVAILABLE:
@@ -396,12 +398,8 @@ function closeloc() {
   menyu.style.zIndex = '-1'
 }
 // get location
-function get_location() {
-  if (
-    confirm(
-      'Wellcome Weather app\nUse current location\nTo get local weather, your current location will be send to the weather services provider.\nIn order to provide you with continuing weather information, Weather will have access to your location next time.'
-    )
-  ) {
+function get_location(a) {
+  if (confirm(a)) {
     getlocation()
     closesearch()
   } else {
@@ -421,7 +419,9 @@ function str_local() {
       console.log(person)
       closesearch()
     } else {
-      get_location()
+      get_location(
+        'Wellcome Weather app\nUse current location\nTo get local weather, your current location will be send to the weather services provider.\nIn order to provide you with continuing weather information, Weather will have access to your location next time.'
+      )
     }
   } else {
     alert('Sorry, your browser does not support web storage...')
