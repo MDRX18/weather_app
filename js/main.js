@@ -51,20 +51,7 @@ function savelocation(position) {
     .catch((err) => {
       console.error(err)
     })
-  fetch(
-    'http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=' +
-      person.asosiy.lat +
-      '&lon=' +
-      person.asosiy.lon +
-      '&appid=76ccebe7fc00800c304a0199ab746cbf'
-  )
-    .then((response) => response.json())
-    .then((data) => {
-      aqi = data.list[0].main.aqi
-    })
-    .catch((err) => {
-      console.error(err)
-    })
+
   getweather()
 }
 function locationerror(error) {
@@ -88,7 +75,21 @@ function locationerror(error) {
 }
 function getweather(a) {
   // fetch current weather info
-
+  fetch(
+    'http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=' +
+      person.asosiy.lat +
+      '&lon=' +
+      person.asosiy.lon +
+      '&appid=76ccebe7fc00800c304a0199ab746cbf'
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      aqi = data.list[0].main.aqi
+      console.log(data)
+    })
+    .catch((err) => {
+      console.error(err)
+    })
   fetch(
     'https://api.openweathermap.org/data/2.5/onecall?lat=' +
       person.asosiy.lat +
@@ -226,6 +227,7 @@ function displayweather() {
         break
 
       case 4:
+        console.log(aqi)
         if (aqi === 1) {
           tdw3[iw].innerHTML = 'Good'
         } else if (aqi === 2) {
