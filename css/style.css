@@ -152,11 +152,11 @@ body {
   font-size: 20px;
 }
 .text1 {
-  flex: 0 0 60%;
+  flex: 0 0 50%;
   color: var(--text-color-400);
 }
 .text2 {
-  flex: 0 0 40%;
+  flex: 0 0 50%;
   text-align: right;
   color: var(--text-color);
 }
