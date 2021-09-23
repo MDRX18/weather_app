@@ -85,7 +85,6 @@ function getweather(a) {
     .then((response) => response.json())
     .then((data) => {
       aqi = data.list[0].main.aqi
-      console.log(data)
     })
     .catch((err) => {
       console.error(err)
@@ -227,7 +226,6 @@ function displayweather() {
         break
 
       case 4:
-        console.log(aqi)
         if (aqi === 1) {
           tdw3[iw].innerHTML = 'Good'
         } else if (aqi === 2) {
@@ -336,7 +334,6 @@ function save_loacation(a) {
   }
   loader.style.top = '20%'
   getweather()
-  console.log(person)
   closesearch()
 }
 // open and close search section
@@ -357,7 +354,6 @@ function openloc() {
   var menyus = document.getElementsByClassName('menyus')[0]
   menyu.style.opacity = '1'
   menyu.style.zIndex = '99'
-  console.log(person.qoshimcha.length)
   menyus.innerHTML = ''
   if (person.qoshimcha[0].name) {
     menyus.innerHTML +=
@@ -418,7 +414,6 @@ function str_local() {
       } else {
         getweather()
       }
-      console.log(person)
       closesearch()
     } else {
       get_location(
