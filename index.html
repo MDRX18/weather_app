@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/960a0ddabc.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="loader">
+      <canvas width="40" height="40" id="mycanvas"></canvas>
+    </div>
+    <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
+    <div class="search-a">
+      <div class="container">
+        <div class="row">
+          <div class="search row">
+            <i class="fas fa-chevron-left" onclick="closesearch()"></i>
+            <input
+              type="search"
+              placeholder="search..."
+              id="search"
+              onsearch="searchf(this)"
+            />
+          </div>
+          <div class="location" onclick="get_location()">
+            Add current location
+          </div>
+          <div id="search-result"></div>
+        </div>
+      </div>
+    </div>
+    <div class="menyu">
+      <div class="container">
+        <div class="row">
+          <h2>Your Locations</h2>
+          <div class="closeloc" onclick="closeloc()">
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="menyus">
+            <div class="menyu-item">Andijon</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="plus" onclick="opensearch()">+</div>
+      <div class="openloc" onclick="openloc()"><i class="fas fa-bars"></i></div>
+      <h1 style="text-align: center; padding: 20px 0; color: white">Weather</h1>
+      <div class="row justify-center">
+        <div class="todayweather">
+        </div>
+        <div class="weeksweather">
+        </div>
+        <div class="aboutweather">
+          <div class="aw row">
+            <div class="aw-img"><img src="./img/uv.png" alt="error" /></div>
+            <div class="aw-text row">
+              <div class="text1">UV index</div>
+              <h3 class="text2"></h3>
+            </div>
+          </div>
+          <div class="aw row">
+            <div class="aw-img">
+              <img src="./img/sunrise.png" alt="error" />
+            </div>
+            <div class="aw-text row">
+              <div class="text1">Sunrise</div>
+              <h3 class="text2"></h3>
+            </div>
+          </div>
+          <div class="aw row">
+            <div class="aw-img"><img src="./img/sunset.png" alt="error" /></div>
+            <div class="aw-text row">
+              <div class="text1">Sunset</div>
+              <h3 class="text2"></h3>
+            </div>
+          </div>
+          <div class="aw row">
+            <div class="aw-img"><img src="./img/wind.png" alt="error" /></div>
+            <div class="aw-text row">
+              <div class="text1">Wind</div>
+              <h3 class="text2"></h3>
+            </div>
+          </div>
+          <div class="aw row">
+            <div class="aw-img"><img src="./img/wave.png" alt="error" /></div>
+            <div class="aw-text row">
+              <div class="text1">AQI</div>
+              <h3 class="text2"></h3>
+            </div>
+          </div>
+          <div class="aw row">
+            <div class="aw-img">
+              <img src="./img/humidity2.png" alt="error" />
+            </div>
+            <div class="aw-text row">
+              <div class="text1">Humidity</div>
+              <h3 class="text2"></h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // loader
+      var canvas = document.getElementById('mycanvas')
+      var ctx = canvas.getContext('2d')
+      ctx.beginPath()
+      ctx.arc(20, 20, 12, 0, 1.5 * Math.PI)
+      ctx.lineWidth = 6
+      ctx.strokeStyle = '#FF0000'
+      ctx.stroke()
+    </script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
