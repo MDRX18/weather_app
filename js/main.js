@@ -76,7 +76,7 @@ function locationerror(error) {
 function getweather(a) {
   // fetch current weather info
   fetch(
-    'http://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=' +
+    'https://api.openweathermap.org/data/2.5/air_pollution/forecast?lat=' +
       person.asosiy.lat +
       '&lon=' +
       person.asosiy.lon +
