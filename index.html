@@ -15,6 +15,7 @@
     <div class="loader">
       <canvas width="40" height="40" id="mycanvas"></canvas>
     </div>
+
     <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->
     <div class="search-a">
       <div class="container">
@@ -52,9 +53,17 @@
       </div>
     </div>
     <div class="container">
+      <div class="set-icon" onclick="change_bg()">
+        <div class="ic-s">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </div>
+      </div>
       <div class="plus" onclick="opensearch()">+</div>
       <div class="openloc" onclick="openloc()"><i class="fas fa-bars"></i></div>
-      <h1 style="text-align: center; padding: 20px 0; color: white">Weather</h1>
+      <h1 style="text-align: center; padding: 20px 0; color: var(--text-color)">
+        Weather
+      </h1>
       <div class="row justify-center">
         <div class="todayweather"></div>
         <div class="weeksweather"></div>

@@ -426,3 +426,24 @@ function str_local() {
   }
 }
 str_local()
+var a2 = 0
+function change_bg() {
+  var vc = document.createElement('style')
+  document.head.appendChild(vc)
+  var ic = document.getElementsByClassName('ic-s')[0]
+  if (a2 === 0) {
+    vc.sheet.insertRule(
+      ':root {--text-color-700: rgb(23, 23, 23);--text-color: rgb(255, 255, 255);--text-color-900: rgb(1, 1, 1);}',
+      0
+    ) //dark
+    ic.style.transform = 'translate(0, -40px)'
+    a2 = 1
+  } else {
+    vc.sheet.insertRule(
+      ':root {--text-color-700: rgb(250, 250, 250);--text-color: rgb(1, 1, 1);--text-color-900: rgb(241, 241, 241);}',
+      0
+    ) //light
+    ic.style.transform = 'translate(0, 0px)'
+    a2 = 0
+  }
+}
